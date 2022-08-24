@@ -203,32 +203,10 @@ body{
     font-family: Josefin Sans, Geneva, Tahoma, sans-serif;
 }
 
-/* .carousel-inner{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
-} */
-
 .cardcarousel{
     width: 50%;
     margin: 0 25%;
 }
-
-/* 
-estoy aplicando un carousel aca
-
-.sect3__contenedor{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    margin-right: 10%;
-    margin-left: 10%;
-
-} */
 
 .sect3__tarjeta{
     display: flex;
@@ -239,7 +217,6 @@ estoy aplicando un carousel aca
     height: auto;
     padding: 10px;
     overflow: auto;
-    margin: 20px 20px;
     background-color: #121d24;
 }
 
@@ -253,16 +230,25 @@ estoy aplicando un carousel aca
     object-fit: cover;
 }
 
-.sect3__tarjeta h4{
-    padding: 5px;
+.tarjeta__texto{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5%
 }
 
-.sect3__tarjeta ul{
-    list-style: none;
+.tarjeta__texto__item{
+    border-right: solid 1px #fff;
 }
 
-.sect3__tarjeta ul li{
-    padding: 2px;
+.tarjeta__texto__item:first-of-type{
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+}
+
+.tarjeta__texto__item:last-of-type{
+    border: none;
 }
 
 .sect4{
@@ -1091,3 +1077,18 @@ estoy aplicando un carousel aca
             padding: 20px;
         }
 }
+
+
+@media only screen and (max-width: 450px){
+
+    .cardcarousel{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .tarjeta__texto{
+        padding: 5% 0;
+    }
+
+}
+
