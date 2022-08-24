@@ -16,6 +16,8 @@
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilos.css">
     <title>Paseo Antares</title>
 </head>
@@ -25,11 +27,13 @@
     <!-- arranca el header  -->
     <section class="sec1">
         <header class="iheader">
-            <div class="iheader__logo">
+            <div class="iheader__logo" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-out"
+                data-aos-duration="800">
                 <img src="./multimedia/logo_final.png" alt="logo" class="logo__img">
                 <h1 class="iheader__logo__text">Paseo Antares</h1>
             </div>
-            <nav class="iheader__navbar">
+            <nav class="iheader__navbar" data-aos="fade-up" data-aos-anchor-placement="center-center"
+                data-aos-duration="800" data-aos-delay="500">
                 <ul class="iheader__navbar__ul">
                     <li class="iheader__navbar__ul__item"><a href="#">Home</a></li>
                     <li class="iheader__navbar__ul__item"><a href="./paginas/locales.html">Locales</a></li>
@@ -38,8 +42,10 @@
                     <li class="iheader__navbar__ul__item"><a href="./paginas/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <hr class="hrleft">
-            <hr class="hrright">
+            <hr class="hrleft" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="800"
+                data-aos-delay="500">
+            <hr class="hrright" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="800"
+                data-aos-delay="500">
             <!-- arranca el menu hamburguesa  -->
             <div class="hamburger-menu">
                 <input id="menu__toggle" type="checkbox" />
@@ -62,7 +68,8 @@
     <main>
         <!-- arranca la segunda seccion  -->
         <section class="mainsect sec2">
-            <h2>Locales comerciales en alquiler en Las Grutas</h2>
+            <h2 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-out" data-aos-duration="800">
+                Locales comerciales en alquiler en Las Grutas</h2>
             <img src="./multimedia/shopping-mall-ge7d58c18a_1920.jpg" alt="imagen1" class="sec2__img"
                 id="sec2__ubicacion__img">
             <div class="sec2__ubicacion__texto">
@@ -86,54 +93,98 @@
 
         <!-- arranca la tercera seccion  -->
         <section class="mainsect sect3">
-            <h2>Locales Disponibles</h2>
-            <div class="sect3__contenedor">
-                <div class="sect3__tarjeta">
-                    <a href="./paginas/locales.html#hl1"><img src="./multimedia/shop1.jpg" alt="img" class="sect3__tarjeta__img"></a>
-                    <h4>Local 1</h4>
-                    <ul>
-                        <li>9mts2</li>
-                        <li>acceso interior</li>
-                        <li>$120.000 anuales</li>
-                    </ul>
+            <h2 data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-out" data-aos-duration="800">
+                Locales Disponibles</h2>
+
+            <!-- Carousel -->
+            <div id="cardCarousel" class="carousel slide cardcarousel" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="5"></button>
                 </div>
-                <div class="sect3__tarjeta">
-                    <a href="./paginas/locales.html#hl2"><img src="./multimedia/shop2.jpg" alt="img" class="sect3__tarjeta__img"></a>
-                    <h4>Local 3</h4>
-                    <ul>
-                        <li>18mts2</li>
-                        <li>acceso interior</li>
-                        <li>$220.000 anuales</li>
-                    </ul>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="sect3__tarjeta">
+                            <a href="./paginas/locales.html#hl1"><img src="./multimedia/shop1.jpg" alt="img"
+                                    class="sect3__tarjeta__img"></a>
+                            <h4>Local 1</h4>
+                            <ul>
+                                <li>9mts2</li>
+                                <li>acceso interior</li>
+                                <li>$120.000 anuales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="sect3__tarjeta">
+                            <a href="./paginas/locales.html#hl2"><img src="./multimedia/shop2.jpg" alt="img"
+                                    class="sect3__tarjeta__img"></a>
+                            <h4>Local 3</h4>
+                            <ul>
+                                <li>18mts2</li>
+                                <li>acceso interior</li>
+                                <li>$220.000 anuales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="sect3__tarjeta">
+                            <a href="./paginas/locales.html#hl3"><img src="./multimedia/shop3.jpg" alt="img"
+                                    class="sect3__tarjeta__img"></a>
+                            <h4>Local 5</h4>
+                            <ul>
+                                <li>18mts2</li>
+                                <li>acceso interior</li>
+                                <li>$240.000 anuales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="sect3__tarjeta">
+                            <a href="./paginas/locales.html#hl4"><img src="./multimedia/shop4.jpg" alt="img"
+                                    class="sect3__tarjeta__img"></a>
+                            <h4>Local 7</h4>
+                            <ul>
+                                <li>40mts2</li>
+                                <li>acceso interior y exterior</li>
+                                <li>$500.000 anuales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="sect3__tarjeta">
+                            <a href="./paginas/locales.html#hl5"><img src="./multimedia/shop5.jpg" alt="img"
+                                    class="sect3__tarjeta__img"></a>
+                            <h4>Local 10</h4>
+                            <ul>
+                                <li>15mts2</li>
+                                <li>acceso interior y exterior</li>
+                                <li>$220.000 anuales</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="sect3__tarjeta">
-                    <a href="./paginas/locales.html#hl3"><img src="./multimedia/shop3.jpg" alt="img" class="sect3__tarjeta__img"></a>
-                    <h4>Local 5</h4>
-                    <ul>
-                        <li>18mts2</li>
-                        <li>acceso interior</li>
-                        <li>$240.000 anuales</li>
-                    </ul>
-                </div>
-                <div class="sect3__tarjeta">
-                    <a href="./paginas/locales.html#hl4"><img src="./multimedia/shop4.jpg" alt="img" class="sect3__tarjeta__img"></a>
-                    <h4>Local 7</h4>
-                    <ul>
-                        <li>40mts2</li>
-                        <li>acceso interior y exterior</li>
-                        <li>$500.000 anuales</li>
-                    </ul>
-                </div>
-                <div class="sect3__tarjeta">
-                    <a href="./paginas/locales.html#hl5"><img src="./multimedia/shop5.jpg" alt="img" class="sect3__tarjeta__img"></a>
-                    <h4>Local 10</h4>
-                    <ul>
-                        <li>15mts2</li>
-                        <li>acceso interior y exterior</li>
-                        <li>$220.000 anuales</li>
-                    </ul>
-                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
+
+            <!-- <div class="sect3__contenedor"> -->
+            <!-- </div> -->
+
         </section>
         <!-- termina la tercera seccion  -->
 
@@ -182,7 +233,14 @@
     <script>
         AOS.init();
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
     <!-- /scripts  -->
 </body>
+
 </html>

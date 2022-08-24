@@ -203,6 +203,22 @@ body{
     font-family: Josefin Sans, Geneva, Tahoma, sans-serif;
 }
 
+/* .carousel-inner{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+} */
+
+.cardcarousel{
+    width: 50%;
+    margin: 0 25%;
+}
+
+/* 
+estoy aplicando un carousel aca
+
 .sect3__contenedor{
     display: flex;
     flex-wrap: wrap;
@@ -212,14 +228,14 @@ body{
     margin-right: 10%;
     margin-left: 10%;
 
-}
+} */
 
 .sect3__tarjeta{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 350px;
+    width: 100%;
     height: auto;
     padding: 10px;
     overflow: auto;
@@ -227,9 +243,12 @@ body{
     background-color: #121d24;
 }
 
+.sect3__tarjeta a{
+    width: 100%;
+}
 
 .sect3__tarjeta__img{
-    height: 200px;
+    height: 350px;
     width: 100%;
     object-fit: cover;
 }
