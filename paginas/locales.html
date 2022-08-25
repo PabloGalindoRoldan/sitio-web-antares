@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Mochiy+Pop+One&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Mochiy+Pop+One&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>Paseo Antares Locales</title>
 </head>
 <body>
@@ -40,18 +48,23 @@
             </ul>
         </div>
     </header>
-    <main>
+    <main class="localesmain">
         <section class="lsec1">
-            <img src="../multimedia/shop1.jpg" alt="local1" class="il1">
-            <img src="../multimedia/shop2.jpg" alt="local2" class="il2">
-            <img src="../multimedia/shop3.jpg" alt="local3" class="il3">
-            <img src="../multimedia/shop4.jpg" alt="local4" class="il4">
-            <img src="../multimedia/shop5.jpg" alt="local5" class="il5">
-            <h2 class="hl1" id="hl1">Local 1</h2>
-            <h2 class="hl2" id="hl2">Local 3</h2>
-            <h2 class="hl3" id="hl3">Local 5</h2>
-            <h2 class="hl4" id="hl4">Local 7</h2>
-            <h2 class="hl5" id="hl5">Local 10</h2>
+            <div class="img__wrapper il1"><img src="../multimedia/shop1.jpg" alt="local1"></div>
+            <div class="img__wrapper il2"><img src="../multimedia/shop2.jpg" alt="local2"></div>
+            <div class="img__wrapper il3"><img src="../multimedia/shop3.jpg" alt="local3"></div>
+            <div class="img__wrapper il4"><img src="../multimedia/shop4.jpg" alt="local4"></div>
+            <div class="img__wrapper il5"><img src="../multimedia/shop5.jpg" alt="local5"></div>
+            <h2 class="hl1" id="hl1" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-out"
+            data-aos-duration="800">Local 1</h2>
+            <h2 class="hl2" id="hl2" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-out"
+            data-aos-duration="800">Local 3</h2>
+            <h2 class="hl3" id="hl3" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-out"
+            data-aos-duration="800">Local 5</h2>
+            <h2 class="hl4" id="hl4" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-out"
+            data-aos-duration="800">Local 7</h2>
+            <h2 class="hl5" id="hl5" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-out"
+            data-aos-duration="800">Local 10</h2>
             <p class="pl1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam ducimus facilis eaque fuga omnis quos esse voluptate! Assumenda, sunt architecto! Ex nemo debitis molestiae atque et totam accusantium nesciunt?</p>
             <p class="pl2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam ducimus facilis eaque fuga omnis quos esse voluptate! Assumenda, sunt architecto! Ex nemo debitis molestiae atque et totam accusantium nesciunt?</p>
             <p class="pl3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam ducimus facilis eaque fuga omnis quos esse voluptate! Assumenda, sunt architecto! Ex nemo debitis molestiae atque et totam accusantium nesciunt?</p>
@@ -79,5 +92,19 @@
             <a href="https://www.youtube.com/"><img src="../multimedia/icons8-youtube-50.png" alt="icono youtube"/></a>
         </div>
     </footer>
+        <!-- scripts  -->
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+    
+        <!-- /scripts  -->
 </body>
 </html>

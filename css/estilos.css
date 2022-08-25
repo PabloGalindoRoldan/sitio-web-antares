@@ -391,10 +391,11 @@ body{
 }
 
 .lsec1{
-    height: 90vw;
+    height: auto;
     margin-top: 18vh;
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 2%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(15, 100px);
@@ -422,10 +423,24 @@ body{
         column-gap: 30px;
 }
 
-.lsec1 img{
-    height: 100%;
+.img__wrapper{
+    display: inline-block;
+    overflow: hidden;
     width: auto;
-    object-fit: cover;
+    height: 100%;
+}
+
+.lsec1 img{
+    height: auto;
+    width: 100%;
+    object-position: center;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    z-index: -1;
+}
+
+.img__wrapper:hover img{
+transform: scale(1.2);
 }
 
 .lsec1 h2{
@@ -989,15 +1004,14 @@ body{
             align-content: center;
             justify-content: center;
             align-items: center;
-            justify-items: stretch;
+            /* justify-items: stretch; */
             gap: 0px;
             column-gap: 0;
     }
 
     .lsec1 img{
-        height: 100%;
-        width: auto;
-        object-fit: cover;
+        height: auto;
+        width: 100%;
     }
 
     .lsec1 h2{
@@ -1088,6 +1102,46 @@ body{
     
     .tarjeta__texto{
         padding: 5% 0;
+    }
+
+    /*locales*/
+
+    .localesmain{
+        height: auto;
+    }
+
+    .lsec1{
+        height: auto;
+        margin-top: 7vh;
+        margin-bottom: 2vh;
+        margin-left: 2%;
+        margin-right: 2%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 50px 150px 100px 50px 150px 100px 50px 150px 100px 50px 150px 100px 50px 150px;
+        grid-template-areas:
+            "il1 il1 il1"
+            "hl1 hl1 hl1"
+            "pl1 pl1 pl1"
+            "il2 il2 il2"
+            "hl2 hl2 hl2"
+            "pl2 pl2 pl2"
+            "il3 il3 il3"
+            "hl3 hl3 hl3"
+            "pl3 pl3 pl3"
+            "il4 il4 il4"
+            "hl4 hl4 hl4"
+            "pl4 pl4 pl4"
+            "il5 il5 il5"
+            "hl5 hl5 hl5"
+            "pl5 pl5 pl5"
+            ;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: stretch;
+            gap: 0px;
+            column-gap: 0;
     }
 
 }
