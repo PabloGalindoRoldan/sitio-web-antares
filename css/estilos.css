@@ -340,6 +340,7 @@ body{
     color: #dfe9ee;
     display: flex;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -392,10 +393,10 @@ body{
 
 .lsec1{
     height: auto;
-    margin-top: 18vh;
+    margin-top: 20vh;
     margin-left: 15%;
     margin-right: 15%;
-    margin-bottom: 2%;
+    margin-bottom: 2vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(15, 100px);
@@ -631,6 +632,11 @@ transform: scale(1.2);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all 0.5s;
+}
+
+.item:hover{
+    transform: scale(1.03);
 }
 
 .item1{
@@ -962,7 +968,7 @@ transform: scale(1.2);
 /* PAGINAS NAVBAR */
 
     .header{
-        height: 5vh;
+        height: 6vh;
     }
 
     .header__navbar{
@@ -1106,9 +1112,9 @@ transform: scale(1.2);
 
     /*locales*/
 
-    .localesmain{
+    /* .localesmain{
         height: auto;
-    }
+    } */
 
     .lsec1{
         height: auto;
