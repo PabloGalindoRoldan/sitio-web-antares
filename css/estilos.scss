@@ -4,14 +4,23 @@
     box-sizing: border-box;
 }
 
+$color1: #344957;
+$color2: #dfe9ee;
+$color3: #fff;
+$color4: rgb(19, 27, 33);
+$color5: rgb(52, 73, 87);
+$color6: #121d24;
+$quicksand: Quicksand, Geneva, Tahoma, sans-serif;
+$josefin: Josefin Sans, Geneva, Tahoma, sans-serif;
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Quicksand, Geneva, Tahoma, sans-serif;
-    color: #344957;
-    background-color: #dfe9ee;
+    font-family: $quicksand;
+    color: $color1;
+    background-color: $color2;
 }
 
 .sec1 {
@@ -47,8 +56,8 @@ body {
 }
 
 .iheader__logo__text {
-    font-family: Josefin Sans, Geneva, Tahoma, sans-serif;
-    color: white;
+    font-family: $josefin;
+    color: $color3;
     font-size: 60px;
     text-align: center;
 }
@@ -72,15 +81,15 @@ body {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: 600;
-    color: white;
+    color: $color3;
     padding: 20px 40px 20px 40px;
     letter-spacing: 2px;
 }
 
 .iheader__navbar__ul__item a:hover {
     text-decoration: none;
-    color: white;
-    background-color: rgb(19, 27, 33);
+    color: $color3;
+    background-color: $color4;
     transition: all 0.3s;
 }
 
@@ -89,7 +98,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 2;
     height: 0.5px;
-    background-color: #dfe9ee;
+    background-color: $color2;
     border: none;
 }
 
@@ -97,7 +106,7 @@ body {
     grid-column-start: 3;
     grid-row-start: 2;
     height: 0.5px;
-    background-color: #dfe9ee;
+    background-color: $color2;
     border: none;
 }
 
@@ -107,7 +116,7 @@ body {
 
 .mainsect {
     height: 110vh;
-    border-bottom: solid 3px rgb(52, 73, 87);
+    border-bottom: solid 3px $color5;
 }
 
 .sec2 {
@@ -130,7 +139,7 @@ body {
     grid-area: titulo;
     text-align: center;
     font-size: 60px;
-    font-family: Josefin Sans, Geneva, Tahoma, sans-serif;
+    font-family: $josefin;
 }
 
 .sec2 h3 {
@@ -190,8 +199,8 @@ body {
 }
 
 .sect3 {
-    background-color: #344957;
-    color: #dfe9ee;
+    background-color: $color1;
+    color: $color2;
     overflow: auto;
 
     h2 {
@@ -199,7 +208,7 @@ body {
         display: block;
         padding: 3vw;
         font-size: 60px;
-        font-family: Josefin Sans, Geneva, Tahoma, sans-serif;
+        font-family: $josefin;
     }
 }
 
@@ -217,10 +226,16 @@ body {
     height: auto;
     padding: 10px;
     overflow: auto;
-    background-color: #121d24;
+    // background-color: $color6;
 
     a {
         width: 100%;
+    }
+}
+
+@for $in from 1 through 5{
+    .tarjeta#{$in} {
+        background-color: lighten($color6, $in * 5%);
     }
 }
 
@@ -238,13 +253,13 @@ body {
 }
 
 .tarjeta__texto__item {
-    border-right: solid 1px #fff;
+    border-right: solid 1px $color3;
 }
 
 .tarjeta__texto__item:first-of-type {
     font-weight: 800;
     font-size: 18px;
-    color: #fff;
+    color: $color3;
 }
 
 .tarjeta__texto__item:last-of-type {
@@ -260,12 +275,12 @@ body {
         display: block;
         padding: 3vw;
         font-size: 60px;
-        font-family: Josefin Sans, Geneva, Tahoma, sans-serif;
+        font-family: $josefin;
     }
 }
 
 .sect4__map__container {
-    border: 0.3rem solid #344957;
+    border: 0.3rem solid $color1;
     margin: 3% 25%;
     height: 25vw;
 }
@@ -281,8 +296,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    background-color: #344957;
-    color: #fff;
+    background-color: $color1;
+    color: $color3;
 }
 
 .footer__contacto {
@@ -324,23 +339,23 @@ body {
 .up {
     height: 60px;
     width: 60px;
-    background-color: #344957;
+    background-color: $color1;
     position: fixed;
     bottom: 50px;
     right: 50px;
     text-align: center;
     line-height: 60px;
-    color: white;
+    color: $color3;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid $color3;
     font-size: 30px;
 }
 
 /*----------------------LOCALES----------------------*/
 
 .header {
-    background-color: #344957;
-    color: #dfe9ee;
+    background-color: $color1;
+    color: $color2;
     display: flex;
     position: fixed;
     z-index: 1;
@@ -381,14 +396,14 @@ body {
 
     a {
         text-decoration: none;
-        color: #dfe9ee;
+        color: $color2;
         font-size: 25px;
         padding: 15px 40px 15px 40px;
     }
 
     a:hover {
-        background-color: #dfe9ee;
-        color: #344957;
+        background-color: $color2;
+        color: $color1;
         font-size: 25px;
         transition: all 0.5s;
     }
@@ -630,7 +645,7 @@ body {
 }
 
 .item {
-    border: 2px solid #344957;
+    border: 2px solid $color1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -711,14 +726,14 @@ body {
 .csect__contenedor__input {
     border: none;
     padding: 6px;
-    background-color: #121d24;
-    color: #fff;
-    font-family: Quicksand, Geneva, Tahoma, sans-serif;
+    background-color: $color6;
+    color: $color3;
+    font-family: $quicksand;
     color-scheme: dark;
 }
 
 .csect__contenedor__input::placeholder {
-    color: #fff;
+    color: $color3;
 }
 
 #submit {
@@ -726,12 +741,12 @@ body {
     width: 200px;
     align-self: center;
     margin-top: 50px;
-    background-color: #344957;
-    color: #dfe9ee;
+    background-color: $color1;
+    color: $color2;
     border-radius: 5px;
     border: none;
     font-size: 20px;
-    font-family: Quicksand, 'Geneva', Tahoma, sans-serif;
+    font-family: $quicksand;
 }
 
 #submit:hover {
@@ -821,7 +836,7 @@ body {
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: #fff;
+        background-color: $color3;
         transition-duration: .25s;
     }
 
@@ -853,8 +868,8 @@ body {
     .menu__item {
         display: block;
         padding: 24px 24px;
-        color: #121d24;
-        font-family: 'Quicksand', sans-serif;
+        color: $color6;
+        font-family: $quicksand;
         font-size: 25px;
         font-weight: 600;
         text-decoration: none;

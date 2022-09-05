@@ -48,7 +48,7 @@ body {
 
 .iheader__logo__text {
   font-family: Josefin Sans, Geneva, Tahoma, sans-serif;
-  color: white;
+  color: #fff;
   font-size: 60px;
   text-align: center;
 }
@@ -72,14 +72,14 @@ body {
   text-decoration: none;
   font-size: 1.5em;
   font-weight: 600;
-  color: white;
+  color: #fff;
   padding: 20px 40px 20px 40px;
   letter-spacing: 2px;
 }
 
 .iheader__navbar__ul__item a:hover {
   text-decoration: none;
-  color: white;
+  color: #fff;
   background-color: rgb(19, 27, 33);
   transition: all 0.3s;
 }
@@ -213,10 +213,29 @@ body {
   height: auto;
   padding: 10px;
   overflow: auto;
-  background-color: #121d24;
 }
 .sect3__tarjeta a {
   width: 100%;
+}
+
+.tarjeta1 {
+  background-color: #1b2b35;
+}
+
+.tarjeta2 {
+  background-color: #233846;
+}
+
+.tarjeta3 {
+  background-color: #2c4657;
+}
+
+.tarjeta4 {
+  background-color: #345468;
+}
+
+.tarjeta5 {
+  background-color: #3d6179;
 }
 
 .sect3__tarjeta__img {
@@ -320,9 +339,9 @@ body {
   right: 50px;
   text-align: center;
   line-height: 60px;
-  color: white;
+  color: #fff;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid #fff;
   font-size: 30px;
 }
 
@@ -690,7 +709,7 @@ body {
   border-radius: 5px;
   border: none;
   font-size: 20px;
-  font-family: Quicksand, "Geneva", Tahoma, sans-serif;
+  font-family: Quicksand, Geneva, Tahoma, sans-serif;
 }
 
 #submit:hover {
@@ -792,7 +811,7 @@ body {
     display: block;
     padding: 24px 24px;
     color: #121d24;
-    font-family: "Quicksand", sans-serif;
+    font-family: Quicksand, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     font-weight: 600;
     text-decoration: none;
