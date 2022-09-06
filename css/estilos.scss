@@ -12,6 +12,15 @@ $color5: rgb(52, 73, 87);
 $color6: #121d24;
 $quicksand: Quicksand, Geneva, Tahoma, sans-serif;
 $josefin: Josefin Sans, Geneva, Tahoma, sans-serif;
+$roboto: Roboto;
+$raleway: Raleway;
+$bebas: Bebas Neue;
+
+
+@mixin align($ialign, $jcontent) {
+    align-items: $ialign;
+    justify-content: $jcontent;
+}
 
 html {
     scroll-behavior: smooth;
@@ -23,6 +32,10 @@ body {
     background-color: $color2;
 }
 
+.width {
+    width: 100%;
+}
+
 .sec1 {
     background-image: url(../multimedia/sec1backgroundcorr.jpg);
     height: 100vh;
@@ -32,21 +45,23 @@ body {
 }
 
 .iheader {
+    @include align (center, center);
     display: grid;
     height: 30%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding-top: 5%;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
 }
 
 .iheader__logo {
+    @include align (center, center);
     grid-column-start: 2;
-    align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
 }
 
 .logo__img {
@@ -72,8 +87,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    justify-content: center;
-    align-items: center;
+    @include align (center, center);
+    // justify-content: center;
+    // align-items: center;
     text-align: center;
 }
 
@@ -120,11 +136,12 @@ body {
 }
 
 .sec2 {
+    @include align (center, center);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
     grid-template-areas:
         ". . titulo titulo titulo . ."
         ". . sui sut sut . ."
@@ -222,18 +239,18 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    @extend .width;
     height: auto;
     padding: 10px;
     overflow: auto;
     // background-color: $color6;
 
     a {
-        width: 100%;
+        @extend .width;
     }
 }
 
-@for $in from 1 through 5{
+@for $in from 1 through 5 {
     .tarjeta#{$in} {
         background-color: lighten($color6, $in * 5%);
     }
@@ -241,14 +258,15 @@ body {
 
 .sect3__tarjeta__img {
     height: 350px;
-    width: 100%;
+    @extend .width;
     object-fit: cover;
 }
 
 .tarjeta__texto {
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    @include align (center, center);
+    // align-items: center;
+    // justify-content: center;
+    @extend .width;
     padding: 5%
 }
 
@@ -286,16 +304,17 @@ body {
 }
 
 #indexmap {
-    width: 100%;
+    @extend .width;
     height: 100%;
 }
 
 .footer {
+    @include align (center, center);
     height: 25vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    // align-items: center;
+    // justify-items: center;
     background-color: $color1;
     color: $color3;
 }
@@ -316,8 +335,9 @@ body {
 .footer__logo {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    @include align (center, center);
+    // align-items: center;
+    // justify-items: center;
 
     h2 {
         font-size: 40px;
@@ -361,7 +381,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    width: 100%;
+    @extend .width;
     height: 18vh;
 }
 
@@ -391,8 +411,9 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include align (center, center);
+    // align-items: center;
+    // justify-content: center;
 
     a {
         text-decoration: none;
@@ -435,15 +456,16 @@ body {
         "il5 il5 pl5"
         "il5 il5 .";
     align-content: center;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     justify-items: stretch;
+    @include align (center, center);
     gap: 10px;
     column-gap: 30px;
 
     img {
         height: auto;
-        width: 100%;
+        @extend .width;
         object-position: center;
         transition: all 0.5s ease-in-out;
         position: relative;
@@ -627,12 +649,28 @@ body {
     grid-area: sp5;
 }
 
+$var: (
+    Quicksand: rgb(0, 0, 0),
+    Josephine: rgb(28, 28, 28),
+    Roboto: rgb(54, 54, 54),
+    Raleway: rgb(163, 163, 163),
+    Bebas: rgb(255, 255, 255),
+);
+
+@each $font,
+$color in $var {
+    .#{$font} {
+        font-family: $font;
+        color: $color;
+    }
+}
+
 /*--------------------GALERIA-----------------------*/
 
 .gsec {
     margin-top: 18vh;
     height: auto;
-    width: 100%;
+    @extend .width;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 200px 200px 200px;
@@ -834,7 +872,7 @@ body {
     .menu__btn>span::after {
         display: block;
         position: absolute;
-        width: 100%;
+        @extend .width;
         height: 2px;
         background-color: $color3;
         transition-duration: .25s;
@@ -886,8 +924,9 @@ body {
         height: 200vh;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(7, 1fr);
-        align-items: center;
-        justify-content: center;
+        @include align (center, center);
+        // align-items: center;
+        // justify-content: center;
         grid-template-areas:
             "titulo titulo titulo"
             "sut sut sut"
@@ -912,7 +951,7 @@ body {
     }
 
     .sec2__img {
-        width: 100%;
+        @extend .width;
         height: auto;
         object-fit: cover;
     }
@@ -942,12 +981,12 @@ body {
 
     .sect4__map__container {
         margin: 0 0 50px 0;
-        width: 100%;
+        @extend .width;
         height: 200px;
     }
 
     .footer {
-        width: 100%;
+        @extend .width;
         overflow: auto;
     }
 
@@ -969,8 +1008,9 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-items: center;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
+        @include align (center, center);
         align-items: center;
         margin: 0;
         padding: 0;
@@ -1029,15 +1069,15 @@ body {
             "pl5 pl5 pl5"
         ;
         align-content: center;
-        justify-content: center;
-        align-items: center;
-        /* justify-items: stretch; */
+        // justify-content: center;
+        // align-items: center;
+        @include align (center, center);
         gap: 0px;
         column-gap: 0;
 
         img {
             height: auto;
-            width: 100%;
+            @extend .width;
         }
 
         h2 {
@@ -1084,9 +1124,10 @@ body {
             "sp5"
         ;
         gap: 10px;
-        align-items: center;
+        @include align (center, center);
+        // align-items: center;
+        // justify-content: center;
         justify-items: center;
-        justify-content: center;
 
         img {
             justify-self: center;
@@ -1101,7 +1142,7 @@ body {
     .gsec {
         margin-top: 7vh;
         height: 200vh;
-        width: 100%;
+        @extend .width;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 1fr);
@@ -1123,7 +1164,7 @@ body {
 @media only screen and (max-width: 450px) {
 
     .cardcarousel {
-        width: 100%;
+        @extend .width;
         margin: 0;
     }
 
@@ -1132,10 +1173,6 @@ body {
     }
 
     /*locales*/
-
-    /* .localesmain{
-        height: auto;
-    } */
 
     .lsec1 {
         height: auto;
@@ -1163,9 +1200,10 @@ body {
             "hl5 hl5 hl5"
             "pl5 pl5 pl5"
         ;
+        // justify-content: center;
+        // align-items: center;
+        @include align (center, center);
         align-content: center;
-        justify-content: center;
-        align-items: center;
         justify-items: stretch;
         gap: 0px;
         column-gap: 0;

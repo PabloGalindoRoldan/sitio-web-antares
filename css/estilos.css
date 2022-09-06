@@ -14,6 +14,10 @@ body {
   background-color: #dfe9ee;
 }
 
+.width, .sect3__tarjeta__img, .sect3__tarjeta a, .sect3__tarjeta {
+  width: 100%;
+}
+
 .sec1 {
   background-image: url(../multimedia/sec1backgroundcorr.jpg);
   height: 100vh;
@@ -23,21 +27,21 @@ body {
 }
 
 .iheader {
+  align-items: center;
+  justify-content: center;
   display: grid;
   height: 30%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding-top: 5%;
-  align-items: center;
-  justify-content: center;
 }
 
 .iheader__logo {
-  grid-column-start: 2;
   align-items: center;
+  justify-content: center;
+  grid-column-start: 2;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .logo__img {
@@ -63,8 +67,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -111,11 +115,11 @@ body {
 }
 
 .sec2 {
+  align-items: center;
+  justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
   grid-template-areas: ". . titulo titulo titulo . ." ". . sui sut sut . ." ". . sct sct sci . ." ". . sei set set . .";
   grid-column-gap: 3vw;
   padding-bottom: 10vh;
@@ -209,15 +213,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   height: auto;
   padding: 10px;
   overflow: auto;
 }
-.sect3__tarjeta a {
-  width: 100%;
-}
-
 .tarjeta1 {
   background-color: #1b2b35;
 }
@@ -240,7 +239,6 @@ body {
 
 .sect3__tarjeta__img {
   height: 350px;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -290,11 +288,11 @@ body {
 }
 
 .footer {
+  align-items: center;
+  justify-content: center;
   height: 25vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
   background-color: #344957;
   color: #fff;
 }
@@ -312,7 +310,7 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 .footer__logo h2 {
   font-size: 40px;
@@ -411,9 +409,9 @@ body {
   grid-template-rows: repeat(15, 100px);
   grid-template-areas: "il1 il1 hl1" "il1 il1 pl1" "il1 il1 ." "hl2 il2 il2" "pl2 il2 il2" ". il2 il2" "il3 il3 hl3" "il3 il3 pl3" "il3 il3 ." "hl4 il4 il4" "pl4 il4 il4" ". il4 il4" "il5 il5 hl5" "il5 il5 pl5" "il5 il5 .";
   align-content: center;
-  justify-content: center;
-  align-items: center;
   justify-items: stretch;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   -moz-column-gap: 30px;
        column-gap: 30px;
@@ -588,6 +586,31 @@ body {
 
 .sp5 {
   grid-area: sp5;
+}
+
+.Quicksand {
+  font-family: Quicksand;
+  color: rgb(0, 0, 0);
+}
+
+.Josephine {
+  font-family: Josephine;
+  color: rgb(28, 28, 28);
+}
+
+.Roboto {
+  font-family: Roboto;
+  color: rgb(54, 54, 54);
+}
+
+.Raleway {
+  font-family: Raleway;
+  color: rgb(163, 163, 163);
+}
+
+.Bebas {
+  font-family: Bebas;
+  color: rgb(255, 255, 255);
 }
 
 /*--------------------GALERIA-----------------------*/
@@ -922,9 +945,8 @@ ul {
     grid-template-rows: 100px 30px 100px 100px 30px 100px 100px 30px 100px 100px 30px 100px 100px 30px 100px;
     grid-template-areas: "il1 il1 il1" "hl1 hl1 hl1" "pl1 pl1 pl1" "il2 il2 il2" "hl2 hl2 hl2" "pl2 pl2 pl2" "il3 il3 il3" "hl3 hl3 hl3" "pl3 pl3 pl3" "il4 il4 il4" "hl4 hl4 hl4" "pl4 pl4 pl4" "il5 il5 il5" "hl5 hl5 hl5" "pl5 pl5 pl5";
     align-content: center;
-    justify-content: center;
     align-items: center;
-    /* justify-items: stretch; */
+    justify-content: center;
     gap: 0px;
     -moz-column-gap: 0;
          column-gap: 0;
@@ -958,8 +980,8 @@ ul {
     grid-template-areas: "si1" "sh1" "sp1" "si2" "sh2" "sp2" "si3" "sh3" "sp3" "si4" "sh4" "sp4" "si5" "sh5" "sp5";
     gap: 10px;
     align-items: center;
-    justify-items: center;
     justify-content: center;
+    justify-items: center;
   }
   .ssect img {
     justify-self: center;
@@ -989,9 +1011,6 @@ ul {
     padding: 5% 0;
   }
   /*locales*/
-  /* .localesmain{
-      height: auto;
-  } */
   .lsec1 {
     height: auto;
     margin-top: 7vh;
@@ -1002,9 +1021,9 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 50px 150px 100px 50px 150px 100px 50px 150px 100px 50px 150px 100px 50px 150px;
     grid-template-areas: "il1 il1 il1" "hl1 hl1 hl1" "pl1 pl1 pl1" "il2 il2 il2" "hl2 hl2 hl2" "pl2 pl2 pl2" "il3 il3 il3" "hl3 hl3 hl3" "pl3 pl3 pl3" "il4 il4 il4" "hl4 hl4 hl4" "pl4 pl4 pl4" "il5 il5 il5" "hl5 hl5 hl5" "pl5 pl5 pl5";
-    align-content: center;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     justify-items: stretch;
     gap: 0px;
     -moz-column-gap: 0;
