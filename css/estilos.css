@@ -249,8 +249,7 @@ body {
 }
 
 .sect4 {
-  overflow: hidden;
-  height: 100vh;
+  height: auto;
 }
 .sect4 h2 {
   text-align: center;
@@ -262,7 +261,7 @@ body {
 
 .sect4__map__container {
   border: 0.3rem solid #344957;
-  margin: 3% 25%;
+  margin: 0 25% 3% 25%;
   height: 25vw;
 }
 
@@ -288,6 +287,7 @@ body {
 }
 .footer__contacto ul {
   list-style: none;
+  padding-left: 32px;
 }
 
 .footer__logo {
@@ -308,10 +308,11 @@ body {
 }
 
 .footer__social {
-  width: 50%;
+  width: 100%;
+  padding: 0 20%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: space-between;
+  justify-content: space-between;
 }
 
 .up {
@@ -818,7 +819,7 @@ body {
     font-size: 35px;
   }
   .sec2 h3 {
-    font-size: 20px;
+    font-size: 30px;
     padding-bottom: 10px;
     padding-left: 10%;
   }
@@ -860,8 +861,8 @@ body {
     margin: 50px 0 50px 0;
   }
   .sect4__map__container {
-    margin: 0 0 50px 0;
-    width: 100%;
+    margin: 0 10% 50px 10%;
+    width: 80%;
     height: 200px;
   }
   .footer {
