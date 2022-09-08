@@ -142,8 +142,7 @@ body {
 .sec2__img {
   width: 20vw;
   height: 10vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   filter: saturate(80%);
   transition: all 0.8s;
 }
@@ -224,8 +223,7 @@ body {
 }
 .sect3__tarjeta__img {
   height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .tarjeta__texto {
@@ -399,13 +397,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
 }
 .lsec1 img {
   height: auto;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   transition: all 0.5s ease-in-out;
   position: relative;
   z-index: -1;
@@ -671,14 +667,6 @@ body {
   color-scheme: dark;
 }
 
-.csect__contenedor__input::-moz-placeholder {
-  color: #fff;
-}
-
-.csect__contenedor__input:-ms-input-placeholder {
-  color: #fff;
-}
-
 .csect__contenedor__input::placeholder {
   color: #fff;
 }
@@ -829,8 +817,7 @@ body {
   .sec2__img {
     width: 80%;
     height: 70%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     justify-self: center;
   }
   .sec2__img:hover {
@@ -923,8 +910,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0px;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
   }
   .lsec1 img {
     height: auto;
@@ -1001,7 +987,8 @@ body {
     align-content: center;
     justify-items: stretch;
     gap: 0px;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
   }
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+/*# sourceMappingURL=estilos.css.map */
